@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taniya Saha | Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts (Optional for clean type) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+ 
+</head>
+<body>
+
+<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="TSPortfolio_Logo.png" alt="Taniya Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#awards">Awards & Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="#branding">Logo & Branding</a></li>
+          <li class="nav-item"><a class="nav-link" href="#uiux">UI/UX Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#graphic">Graphic Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#competition">Competitions Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <script>
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+
+      if (navbarToggler.offsetParent !== null && navbarCollapse.classList.contains('show')) {
+        navbarToggler.click();
+      }
+    });
+  });
+</script>
+
+
+
+<!-- Hero Section -->
+  <header id="hero" class="hero-section d-flex align-items-center justify-content-center text-center">
+    <div class="text-container">
+        <h4 class="sub-hero-name">PORTFOLIO OF</h4>
+        <h1 class="hero-name">TANIYA SAHA</h1>
+        <div class="hero-subtitle">
+            <span id="typing-text"></span>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center cta-buttons">
+            <a href="TaniyaSaha_UI-UX & WebDesigner_Resume.pdf" class="btn btn-teal m-2" download>Download Resume</a>
+            <a href="Portfolio_Of_TaniyaSaha_UI_UX.pdf" class="btn btn-outline-light m-2" download>Download Portfolio</a>
+        </div>
+    </div>
+  </header>
+
+<!-- About Me Section -->
+  <section id="about" class="about-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Text Content -->
+        <div class="col-lg-7 col-md-12 mb-4 mb-lg-0">
+          <h2 class="text-white">Hello,</h2>
+          <h2 class="text-white">I'm Taniya Saha</h2>
+          <h3 style="color: #4AA1A1; font-weight: 700; font-size: 2rem;">UI/UX & Web Designer</h3>
+          <p class="text-light mt-3" style="max-width: 600px;">
+            Transitioning from IT with a passion for crafting clean, purposeful digital experiences.
+            I enjoy creating user-centered interfaces with a focus on clarity and functionality.
+          </p>
+        </div>
+
+        <!-- Image Content -->
+        <div class="col-lg-5 col-md-12 text-center">
+          <div class="profile-img-wrapper">
+            <img src="Taniya_Image.png" alt="Taniya Saha" class="profile-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Tools Section -->
+  <section id="skills" class="skills-section py-4 bg-dark">
+    <div class="container">
+      <h2 class="text-center mb-5" style="color: #4AA1A1;">Skills & Tools</h2>
+      <div class="row g-4">
+        <!-- UI/UX & Web Tools -->
+        <div class="col-md-4">
+          <div class="p-4 bg-light rounded">
+            <h5 class="text-center" style="color: #4AA1A1;">UI/UX & Web Tools</h5>
+            <p class="text-center small">Used for designing, prototyping, and building responsive digital experiences.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+              <img src="Figma.png" alt="Figma" height="40">
+              <img src="VS Code.png" alt="VS Code" height="40">
+              <img src="HTML.png" alt="HTML5" height="46">
+              <img src="CSS.png" alt="CSS3" height="40">
+              <img src="bootstrap.png" alt="Bootstrap" height="40">
+            </div>
+          </div>
+        </div>
+
+        <!-- Design Tools -->
+        <div class="col-md-4">
+          <div class="p-4 bg-light rounded">
+            <h5 class="text-center" style="color: #4AA1A1;">Design Tools</h5>
+            <p class="text-center small">Used for creating graphics, layouts, and visual compositions.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+              <img src="Photoshop.png" alt="Photoshop" height="40">
+              <img src="Illustrator.png" alt="Illustrator" height="40">
+              <img src="Indesign.png" alt="InDesign" height="40">
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Tools -->
+        <div class="col-md-4">
+          <div class="p-4 bg-light rounded">
+            <h5 class="text-center" style="color: #4AA1A1;">AI Tools</h5>
+            <p class="text-center small">Used for ideation, structuring, and reference generation where applicable.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+              <img src="chatgpt.png" alt="ChatGPT" height="40">
+              <img src="Freepik.png" alt="Freepik" height="40">
+              <img src="leonardo.png" alt="Leonardo AI" height="40">
+              <img src="Canva.png" alt="Canva" height="40">
+              <img src="Playground ai.png" alt="Payground" height="40">
+              <img src="Craiyon.png" alt="Craiyon" height="35">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+      function setActiveLink() {
+          const currentHash = window.location.hash || "#";
+          const links = document.querySelectorAll(".navbar-nav .nav-link");
+
+          links.forEach(link => {
+              if (link.getAttribute("href") === currentHash) {
+                  link.classList.add("active");
+              } else {
+                  link.classList.remove("active");
+              }
+          });
+      }
+
+      // Initial call on load
+      setActiveLink();
+
+      // Update on hash change
+      window.addEventListener("hashchange", setActiveLink);
+  });
+  </script>
+
+
+
+
+
+<!-- Awards & Achievements -->
+<section id="awards" class="awards-section">
+  <h2 class="section-title" style="color: #4AA1A1;">Awards & Achievements</h2>
+  <div class="carousel-container">
+    <!-- <button class="carousel-btn prev">&#8592;</button> -->
+
+    <div class="carousel-track">
+      <!-- Award Card 1 -->
+      <div class="award-card">
+        <h3>MAAC Creative League (MCL) 10, 2025</h3>
+        <p>Secured (Zonal & Pick Of The Day) Positions in Poster Design (Psychological Horror Theme) among participants across centers.</p>
+        <div class="certificates">
+          <img src="ParticipationCertificate_MCL10_PosterDesign.png" alt="Certificate 1">
+          <img src="ParticipationCertificate_MCL10_MattePainting.png" alt="Certificate 2">
+          <img src="ParticipationCertificate_MCL10_MAAC_GOT_TALENTS.png" alt="Certificate 3">
+        </div>
+      </div>
+
+      <!-- Award Card 2 -->
+      <div class="award-card">
+        <h3>24FPS Multimedia Mania, 2024</h3>
+        <p>Participated, 24FPS Multimedia Mania, 2024.</p>
+        <div class="certificates">
+          <img src="Particapation for 24 FPS (Medal).jpg" alt="Medal" class="medal">
+        </div>
+      </div>
+    </div>
+
+    <!-- <button class="carousel-btn next">&#8594;</button> -->
+  </div>
+</section>
+
+<!-- Scrolling-->
+ <script>
+  const track = document.querySelector('.carousel-track');
+  const scrollAmount = track.clientWidth;
+
+  // Auto-scroll only
+  setInterval(() => {
+    if (track.scrollLeft + track.clientWidth >= track.scrollWidth) {
+      track.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  }, 5000); // every 5 seconds
+</script>
+
+
+
+
+<!-- Logo & Branding Section -->
+  <section id="branding" class="branding-section">
+    <div class="branding-header">
+      <h2 class="section-title" style="color: #4AA1A1;">Logo & Branding</h2>
+      <p>Selected Brand Marks for UI/UX and Web Projects</p>
+    </div>
+    
+    <!-- Match Awards style: frame starts here -->
+    <div class="carousel-wrapper">
+      <div class="arrow-button left-arrow">&#10094;</div>
+        
+        <!-- Scrollable Branding Cards -->
+        <div class="branding-carousel-wrapper">
+
+          <!-- Card 1: CourseCraft -->
+          <div class="branding-card">
+            <h3 class="text-center" style="color: #4AA1A1; font-weight: 550;">E-Learning App</h3>
+            <div class="branding-row">
+              <div class="branding-item branding-logo">
+                <img src="CourseCraft Logo_.png" alt="CourseCraft Logo">
+              </div>
+              <div class="branding-item">
+                <img src="CourseCraft_Certificate.png" alt="Mockup 1">
+              </div>
+              <div class="branding-item">
+                <img src="CourseCraft_ID Card.png" alt="Mockup 2">
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: DonutDash -->
+          <div class="branding-card">
+            <h3 class="text-center" style="color: #4AA1A1; font-weight: 550;">E-Commerce Food Delivery App</h3>
+            <div class="branding-row">
+              <div class="branding-item branding-logo">
+                <img src="DonutDash Logo_.png" alt="DonutDash Logo">
+              </div>
+              <div class="branding-item">
+                <img src="DonutDash_Cap.png" alt="Mockup 1">
+              </div>
+              <div class="branding-item">
+                <img src="DonutDash_Hoarding.png" alt="Mockup 2">
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: CalmNest -->
+          <div class="branding-card">
+            <h3 class="text-center" style="color: #4AA1A1; font-weight: 550;">Meditation & Mindfulness App</h3>
+            <div class="branding-row">
+              <div class="branding-item branding-logo">
+                <img src="CalmNestLogo.png" alt="CalmNest Logo">
+              </div>
+              <div class="branding-item">
+                <img src="CalmNest_Candle.png" alt="Mockup 1">
+              </div>
+              <div class="branding-item">
+                <img src="CalmNestCusion.png" alt="Mockup 2">
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Medivance -->
+          <div class="branding-card">
+            <h3 class="text-center" style="color: #4AA1A1; font-weight: 550;">Pharmaceutical Landing page</h3>
+            <div class="branding-row">
+              <div class="branding-item branding-logo">
+                <img src="Logo_MedivancePharmaceutical Company.png" alt="Medivance Logo">
+              </div>
+              <div class="branding-item">
+                <img src="Medivance_Letterhead_pharmaceutical company.png" alt="Mockup 1">
+              </div>
+              <div class="branding-item">
+                <img src="Medivance_Medicine box_Packaging Design.png" alt="Mockup 2">
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: EcoMarket -->
+          <div class="branding-card">
+            <h3 class="text-center" style="color: #4AA1A1; font-weight: 550;">Organic Grocery Store</h3>
+            <div class="branding-row">
+              <div class="branding-item branding-logo">
+                <img src="EcoMarket Logo_.png" alt="EcoMarket Logo">
+              </div>
+              <div class="branding-item">
+                <img src="EcoMarket_Hoading.png" alt="Mockup 1">
+              </div>
+              <div class="branding-item">
+                <img src="EcoMarket_Bag.png" alt="Mockup 2">
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Zayzon -->
+          <div class="branding-card">
+            <h3 class="text-center" style="color: #4AA1A1; font-weight: 550;">E-Commerce Web Store</h3>
+            <div class="branding-row">
+              <div class="branding-item branding-logo">
+                <img src="Zayzon_ (Blank Background)Logo.png" alt="Zayzon Logo">
+              </div>
+              <div class="branding-item">
+                <img src="Zayzon_Package.png" alt="Mockup 1">
+              </div>
+              <div class="branding-item">
+                <img src="Zayzon_Hoarding.png" alt="Mockup 2">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      <div class="arrow-button right-arrow">&#10095;</div>
+    </div>
+  </section>
+
+      <!-- Enable Scroll on Arrows -->
+        <script>
+        const carousel = document.querySelector('.branding-carousel-wrapper');
+        const cards = document.querySelectorAll('.branding-card');
+        const leftArrow = document.querySelector('.left-arrow');
+        const rightArrow = document.querySelector('.right-arrow');
+
+        let currentIndex = 0;
+
+        function updateBlur() {
+          cards.forEach((card, index) => {
+            if (index === currentIndex) {
+              card.classList.remove('blur');
+            } else {
+              card.classList.add('blur');
+            }
+          });
+        }
+
+          function updateArrowButtons() {
+          if (currentIndex === 0) {
+            leftArrow.disabled = true;
+            leftArrow.classList.add('disabled');
+          } else {
+            leftArrow.disabled = false;
+            leftArrow.classList.remove('disabled');
+          }
+
+          if (currentIndex === cards.length - 1) {
+            rightArrow.disabled = true;
+            rightArrow.classList.add('disabled');
+          } else {
+            rightArrow.disabled = false;
+            rightArrow.classList.remove('disabled');
+          }
+        }
+
+        // Initial setup
+        updateBlur(); 
+        updateArrowButtons();
+
+        leftArrow.addEventListener('click', () => {
+          if (currentIndex > 0) {
+            currentIndex--;
+            const cardWidth = cards[currentIndex].offsetWidth + 20; 
+            carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+            updateBlur();
+            updateArrowButtons();
+          }
+        });
+
+        rightArrow.addEventListener('click', () => {
+          if (currentIndex < cards.length - 1) {
+            currentIndex++;
+            const cardWidth = cards[currentIndex].offsetWidth + 20;
+            carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+            updateBlur();
+            updateArrowButtons();
+          }
+        });
+      </script>
+
+
+
+<!--UI/UX Section-->
+  <section id="uiux" class="section-uiux">
+  <div class="section-header">
+    <h2><span>UI/UX</span> Projects</h2>
+    <p>A selection of my UI/UX and Web Design projects focused on creating clear, user-centered digital experiences.</p>
+  </div>
+
+  <div class="projects-grid">
+    
+    <!-- Project Card 1 -->
+    <div class="project-card">
+      <h3>CourseCraft</h3>
+      <h4>E-Learning App</h4>
+      <img src="CourseCraft_ProjectHighlight.png" alt="CourseCraft App UI">
+      <p class="tools">Tools: Figma</p>
+      <p class="description">A clean, intuitive e-learning app enabling structured course discovery and seamless learning.</p>
+      <a href="https://www.figma.com/proto/OIa8KbLXwqPxoAAXXfFmzr/CourseCraft-E-Learning-App?node-id=0-1&t=EZdgtv9OFG5TXXMe-1" target="_blank" class="view-btn">View Project</a>
+    </div>
+
+    <!-- Project Card 2 -->
+    <div class="project-card">
+      <h3>DonutDash</h3>
+      <h4>Donut Delivery App</h4>
+      <img src="DonutDash_ProjectHighlight.png" alt="DonutDash App UI">
+      <p class="tools">Tools: Figma</p>
+      <p class="description">A playful, clutter-free donut delivery app designed for fast browsing and smooth checkout.</p>
+      <a href="https://www.figma.com/proto/H0Ajul4FHr0BZNNM9XdHee/DonutDash-Ecommerce-App?node-id=0-1&t=pdJIc7krdKABSeLV-1" target="_blank" class="view-btn">View Project</a>
+    </div>
+
+    <!-- Project Card 3 -->
+    <div class="project-card">
+      <h3>CalmNest</h3>
+      <h4>Meditation App</h4>
+      <img src="CalmNest_ProjectHighlight.png" alt="CalmNest App UI">
+      <p class="tools">Tools: Figma</p>
+      <p class="description">A calming meditation app offering guided sessions with a clear, distraction-free interface.</p>
+      <a href="https://www.figma.com/proto/YQnyVvoMYWEW8SCGtliwZm/CalmNest-Meditation-App?node-id=0-1&t=zbIuDdKss82f0jkQ-1" target="_blank" class="view-btn">View Project</a>
+    </div>
+
+    <!-- Project Card 4 -->
+    <div class="project-card">
+      <h3>Medivance</h3>
+      <h4>Pharma Landing Page</h4>
+      <img src="MedivanceLandingPage_ProjectHighlight.png" alt="Medivance Web UI">
+      <p class="tools">Tools: Figma</p>
+      <p class="description">A clean, trustworthy landing page showcasing pharmaceutical products with clarity and simplicity.</p>
+      <a href="https://www.figma.com/proto/Sf9xO3UCqwUsjE7uP5RwkY/Pharmaceutical-Company-Landing-page?node-id=2-2&t=oNqDQAzm04baz6OF-1" target="_blank" class="view-btn">View Project</a>
+    </div>
+
+    <!-- Project Card 5 -->
+    <div class="project-card">
+      <h3>EcoMarket</h3>
+      <h4>Organic Store Website</h4>
+      <img src="EcoMarket_ProjectHighlight.png" alt="EcoMarket Web UI">
+      <p class="tools">Tools: HTML, CSS, Bootstrap</p>
+      <p class="description">A fresh, user-friendly organic store website designed for easy browsing and confident purchasing.</p>
+      <a href="https://taniyasaha23.github.io/EcoMarket-/" target="_blank" class="view-btn">View Project</a>
+    </div>
+
+    <!-- Project Card 6 -->
+    <div class="project-card">
+      <h3>Zayzon</h3>
+      <h4>Ecommerce Website</h4>
+      <img src="Zayzon_ProjectHighlight.png" alt="Zayzon Web UI">
+      <p class="tools">Tools: HTML, CSS, Bootstrap</p>
+      <p class="description">A structured, responsive web store inspired by Amazon for a seamless online shopping experience.</p>
+      <a href="https://taniyasaha23.github.io/Zayzon/" target="_blank" class="view-btn">View Project</a>
+    </div> 
+
+  </div>
+</section>
+
+
+
+
+<!-- Graphic Projects Section -->
+<section id="graphic" class="graphic-projects">
+  <div class="container">
+  
+    <!-- Left Arrow Button -->
+    <div class="graphic-arrow-button left-arrow1">&#10094;</div>
+
+    <!-- Cards Wrapper -->
+    <div class="graphic-cards-wrapper">
+      
+      <!-- Card 1 -->
+      <div class="graphic-card">
+        <h2> <span>Graphic Design Projects</span> - Poster Designs</h2>
+        <p>Posters showcasing skills in layout, typography, and creating visually engaging compositions.</p>
+
+        <div class="image-block-container">
+          <div class="image-block">
+            <h3>Internal Competition Announcement Poster</h3>
+            <img src="BrokenPastel.png" alt="Internal Competition Announcement Poster">
+          </div>
+          <div class="image-block">
+            <h3>Horror Movie Poster</h3>
+            <img src="HorrorMoviePoster.png" alt="Horror Movie Poster">
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="graphic-card">
+        <h2> <span>Graphic Design Projects</span> - Matte Painting</h2>
+        <p>Matte paintings showcasing skills in composition, lighting, and storytelling through visual environments.</p>
+
+        <div class="image-block-container">
+          <div class="image-block">
+            <h3>Sanctuary of the Celestial Monks</h3>
+            <img src="Sanctuary of the Celestial Monks.png" alt="SanctuaryMonks_Matte-Painting">
+          </div>
+          <div class="image-block">
+            <h3>Inferno of the Abyss</h3>
+            <img src="InfernoOfTheAbyss_MattePainting.png" alt="Abyss Matte Painting">
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="graphic-card">
+        <h2> <span>Graphic Design Projects</span> - Image Manipulation</h2>
+        <p>Image manipulations showcasing skills in compositing, masking, and creating visual narratives.</p>
+
+        <div class="image-block-container">
+          <div class="image-block">
+            <h3>Umbrella Girl in Bulb</h3>
+            <img src="Umbrella girl inside Bulb-min.png" alt="Umbrella ImageManipulation">
+          </div>
+          <div class="image-block">
+            <h3>Surfer Emerging from Phone</h3>
+            <img src="surfer_ImageManipulation.png" alt="Surfer ImageManipulation">
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="graphic-card">
+        <h2> <span>Graphic Design Projects</span> - Social Media Post</h2>
+        <p>Social media posts focusing on visual hierarchy, clarity, and brand consistency.</p>
+
+        <div class="image-block-container">
+          <div class="image-block">
+            <h3>Jewellery Promotion Post</h3>
+            <img src="Jewelery.png" alt="Jewellery SocialMediaPost">
+          </div>
+          <div class="image-block">
+            <h3>Burger Promotion Post</h3>
+            <img src="Burger.png" alt="Burger SocialMediaPost">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right Arrow Button -->
+    <div class="graphic-arrow-button right-arrow1">&#10095;</div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const wrapper = document.querySelector('.graphic-cards-wrapper');
+    const leftArrow = document.querySelector('.left-arrow1');
+    const rightArrow = document.querySelector('.right-arrow1');
+
+    leftArrow.addEventListener('click', () => {
+      wrapper.scrollBy({
+        left: -wrapper.offsetWidth,
+        behavior: 'smooth'
+      });
+    });
+
+    rightArrow.addEventListener('click', () => {
+      wrapper.scrollBy({
+        left: wrapper.offsetWidth,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script> 
+
+
+  
+
+
+
+<!-- Competion Projects Section -->
+<section id="competition" class="competition-projects">
+  <div class="container">
+  
+  <!-- Left Arrow Button -->
+  <div class="competition-arrow-button left-arrow2">&#10094;</div>
+
+    <!-- Cards Wrapper -->
+    <div class="competition-cards-wrapper">
+      
+      <!-- Card 1 -->
+      <div class="competition-card">
+        <h2> <span>Graphic Competition Projects</span> - 24FPS Multimedia Mania, 2024 (Team Project)</h2>
+        <p>Designed brand identity and campaign assets for the team project "Sheinic" under 24FPS.</p>
+
+        <div class="compimg-block-container">
+          <div class="compimg-block">
+            <h3>Sheinic Packaging Design</h3>
+            <img src="24FPS_Packaging.png" alt="Sheinic Packaging Design">
+          </div>
+          <div class="compimg-block">
+            <h3>Sheinic Social Media Creatives</h3>
+            <img src="24FPSPoster.png" alt="Sheinic Social Media Creatives">
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="competition-card">
+        <h2> <span>Graphic Competition Projects</span> - MAAC Creative League (MCL) 10, 2025</h2>
+        <p>Poster and matte painting projects recognized at MCL 10, 2025.</p>
+
+        <div class="compimg-block-container">
+          <div class="compimg-block">
+            <h3>Poster Design - Psychological Horror Movie Poster</h3>
+            <img src="Psycological horror movie poster.png" alt="Poster Design - Psychological Horror Movie Poster">
+          </div>
+          <div class="compimg-block">
+            <h3>Matte Painting - Genesis of Life</h3>
+            <img src="GenisOfLife_MattePainting.png" alt="Matte Painting - Genesis of Life">
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="competition-card">
+        <h2> <span>Graphic Competition Project</span> - Broken Pastel, 2025 (Internal Competition)</h2>
+        <p>Futuristic vector art exploring color harmony and clean composition for Broken Pastel 2025.</p>
+
+        <div class="compimg-block-container">
+          <div class="compimg-block1">
+            <img src="Futuristic_Vector_Art.png" alt="Futuristic Vector art">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right Arrow Button -->
+    <div class="graphic-arrow-button right-arrow2">&#10095;</div>
+  </div>
+</section>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const wrapper = document.querySelector('.competition-cards-wrapper');
+    const leftArrow = document.querySelector('.left-arrow2');
+    const rightArrow = document.querySelector('.right-arrow2');
+
+    leftArrow.addEventListener('click', () => {
+      wrapper.scrollBy({
+        left: -wrapper.offsetWidth,
+        behavior: 'smooth'
+      });
+    });
+
+    rightArrow.addEventListener('click', () => {
+      wrapper.scrollBy({
+        left: wrapper.offsetWidth,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script> 
+
+
+
+
+
+<!-- Contact Section -->
+
+<section id="contact" class="contact-section">
+  <h1>Thank You for Viewing My Portfolio</h1>
+  <p>I look forward to contributing to your team’s success.</p>
+
+  <div class="contact-card">
+    <h3>Currently open to UI/UX and Web Design opportunities.</h3>
+
+    <div class="contact-item">
+      <img src="email.png" alt="Email Icon" class="icon" />
+      <span><a href="mailto:taniya.saha24@gmail.com">taniya.saha24@gmail.com</a></span>
+    </div>
+    <div class="contact-item">
+      <img src="linkedin.png" alt="LinkedIn Icon" class="icon" />
+      <span><a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank">LinkedIn Profile</a></span>
+    </div>
+    <div class="contact-item">
+      <img src="behance.png" alt="Behance Icon" class="icon" />
+      <span><a href="https://www.behance.net/taniyasaha4" target="_blank">Behance Profile</a></span>
+    </div>
+    <div class="contact-item">
+      <img src="location.png" alt="Location Icon" class="icon" />
+      <span>Bangalore, India</span>
+    </div>
+    <div class="contact-item">
+      <img src="call.png" alt="Contact Icon" class="icon" />
+      <span>+919433730303</span>
+      </div>
+    
+  </div>
+
+  <footer class="footer">
+    <p>Designed & Developed by Taniya Saha</p>
+    <p>© Taniya Saha 2025. All rights reserved.</p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" onclick="scrollToTop()">↑</button> 
+</section>
+
+<script>
+  function scrollToTop() {
+    document.getElementById("hero").scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Typed.js for animation -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="scripts.js"></script>
+
+</body>
+</html>
