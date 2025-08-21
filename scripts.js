@@ -14,12 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function updateBlur() {
   const isMobile = window.innerWidth <= 768;
-  cards.forEach((card, index) => {
+  cards1.forEach((card, index) => {
     if (isMobile) {
       card.classList.remove('blur');
       card.classList.remove('glow'); // Remove glow for mobile
     } else {
-      if (index === currentIndex) {
+      if (index === currentIndex1) {
         card.classList.remove('blur');
         card.classList.add('glow'); // Add glow only for active card on big screens
       } else {
@@ -34,14 +34,14 @@ window.addEventListener('resize', updateBlur); // Re-evaluate blur/glow on resiz
 
 function updateArrowButtons() {
   // Hide left arrow if on the first card
-  if (currentIndex === 0) {
+  if (currentIndex1 === 0) {
     leftArrow.classList.add('arrow-hidden');
   } else {
     leftArrow.classList.remove('arrow-hidden');
   }
 
   // Hide right arrow if on the last card
-  if (currentIndex === cards.length - 1) {
+  if (currentIndex1 === cards1.length - 1) {
     rightArrow.classList.add('arrow-hidden');
   } else {
     rightArrow.classList.remove('arrow-hidden');
@@ -65,17 +65,32 @@ document.addEventListener('DOMContentLoaded', function () {
   const cards = document.querySelectorAll('.graphic-card');
 
   // Get width of one card (assume all cards same width)
-  function getCardWidth() {
-    return cards[0].getBoundingClientRect().width + 16; // 16px = average gap
-  }
+//  function getCardWidth() {
+//   return cards[0].getBoundingClientRect().width + 16; // 16px = average gap
+//  }
 
-  function scrollToCard(direction) {
-    const scrollAmount = getCardWidth();
-    wrapper.scrollBy({
-      left: direction * scrollAmount,
-      behavior: 'smooth'
-    });
+//  function scrollToCard(direction) {
+//    const scrollAmount = getCardWidth();
+//    wrapper.scrollBy({
+//      left: direction * scrollAmount,
+//      behavior: 'smooth'
+//    });
+//  }
+
+function getScrollAmount() {
+  if (window.innerWidth <= 768) {
+    return wrapper.offsetWidth; // one full viewport width
+  } else {
+    return cards[0].getBoundingClientRect().width + 16; // desktop: card + gap
   }
+}
+
+function scrollToCard(direction) {
+  wrapper.scrollBy({
+    left: direction * getScrollAmount(),
+    behavior: 'smooth'
+  });
+}
 
   leftArrow.addEventListener('click', () => scrollToCard(-1));
   rightArrow.addEventListener('click', () => scrollToCard(1));
@@ -146,17 +161,32 @@ document.addEventListener('DOMContentLoaded', function () {
   const cards = document.querySelectorAll('.competition-card');
 
   // Get width of one card (assume all cards same width)
-  function getCardWidth() {
-    return cards[0].getBoundingClientRect().width + 16; // 16px = average gap
-  }
+//  function getCardWidth() {
+//    return cards[0].getBoundingClientRect().width + 16; // 16px = average gap
+//  }
 
-  function scrollToCard(direction) {
-    const scrollAmount = getCardWidth();
-    wrapper.scrollBy({
-      left: direction * scrollAmount,
-      behavior: 'smooth'
-    });
+//  function scrollToCard(direction) {
+//    const scrollAmount = getCardWidth();
+//    wrapper.scrollBy({
+//      left: direction * scrollAmount,
+//      behavior: 'smooth'
+//    });
+//  }
+
+function getScrollAmount() {
+  if (window.innerWidth <= 768) {
+    return wrapper.offsetWidth; // one full viewport width
+  } else {
+    return cards[0].getBoundingClientRect().width + 16; // desktop: card + gap
   }
+}
+
+function scrollToCard(direction) {
+  wrapper.scrollBy({
+    left: direction * getScrollAmount(),
+    behavior: 'smooth'
+  });
+}
 
   leftArrow.addEventListener('click', () => scrollToCard(-1));
   rightArrow.addEventListener('click', () => scrollToCard(1));

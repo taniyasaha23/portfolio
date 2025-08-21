@@ -187,6 +187,15 @@
     <div class="carousel-track">
       <!-- Award Card 1 -->
       <div class="award-card">
+        <h3>Generative AI Mastermind - Outskill, 2025</h3>
+        <p>Successfully completed the "Generative AI Mastermind" program by Outskill, earning a Certificate of Completion.</p>
+        <div class="certificates">
+          <img src="GenerativeAI_Outskill_Certificate.png" alt="Generative AI Mastermind Certificate">
+        </div>
+      </div>
+
+      <!-- Award Card 2 -->
+      <div class="award-card">
         <h3>MAAC Creative League (MCL) 10, 2025</h3>
         <p>Secured (Zonal & Pick Of The Day) Positions in Poster Design (Psychological Horror Theme) among participants across centers.</p>
         <div class="certificates">
@@ -196,7 +205,7 @@
         </div>
       </div>
 
-      <!-- Award Card 2 -->
+      <!-- Award Card 3 -->
       <div class="award-card">
         <h3>24FPS Multimedia Mania, 2024</h3>
         <p>Participated, 24FPS Multimedia Mania, 2024.</p>
@@ -204,6 +213,8 @@
           <img src="Particapation for 24 FPS (Medal).jpg" alt="Medal" class="medal">
         </div>
       </div>
+
+      
     </div>
 
     <!-- <button class="carousel-btn next">&#8594;</button> -->
@@ -211,7 +222,7 @@
 </section>
 
 <!-- Scrolling-->
- <script>
+<!-- <script>
   const track = document.querySelector('.carousel-track');
   const scrollAmount = track.clientWidth;
 
@@ -223,6 +234,29 @@
       track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   }, 5000); // every 5 seconds
+</script> -->
+
+<script>
+  const track = document.querySelector('.carousel-track');
+  const cards = track.querySelectorAll('.award-card');
+  let currentIndex = 0;
+
+  function scrollToCard(index) {
+    const card = cards[index];
+    if (card) {
+      const offset = card.offsetLeft;
+      track.scrollTo({ left: offset, behavior: 'smooth' });
+    }
+  }
+
+  // Auto-scroll
+  setInterval(() => {
+    currentIndex++;
+    if (currentIndex >= cards.length) {
+      currentIndex = 0; // loop back to first
+    }
+    scrollToCard(currentIndex);
+  }, 3000); // every 5s
 </script>
 
 
@@ -344,67 +378,52 @@
     </div>
   </section>
 
-      <!-- Enable Scroll on Arrows -->
-        <script>
-        const carousel = document.querySelector('.branding-carousel-wrapper');
-        const cards = document.querySelectorAll('.branding-card');
-        const leftArrow = document.querySelector('.left-arrow');
-        const rightArrow = document.querySelector('.right-arrow');
 
-        let currentIndex = 0;
+  <!-- Enable Scroll on Arrows -->
+        <script>
+        const carousel   = document.querySelector('.branding-carousel-wrapper');
+        const cards1     = Array.from(document.querySelectorAll('.branding-card'));
+        const leftArrow  = document.querySelector('.left-arrow');
+        const rightArrow = document.querySelector('.right-arrow');
+        let currentIndex1 = 0;
+
+        const padLeft = () => parseInt(getComputedStyle(carousel).paddingLeft) || 0;
+
+        function snapTo(index) {
+          currentIndex1 = Math.max(0, Math.min(index, cards1.length - 1));
+          const x = cards1[currentIndex1].offsetLeft - padLeft();
+          carousel.scrollTo({ left: x, behavior: 'smooth' });
+          updateBlur();
+          updateArrowButtons();
+        }
 
         function updateBlur() {
-          cards.forEach((card, index) => {
-            if (index === currentIndex) {
-              card.classList.remove('blur');
-            } else {
-              card.classList.add('blur');
-            }
-          });
+          cards1.forEach((card, i) => card.classList.toggle('blur', i !== currentIndex1));
         }
 
-          function updateArrowButtons() {
-          if (currentIndex === 0) {
-            leftArrow.disabled = true;
-            leftArrow.classList.add('disabled');
-          } else {
-            leftArrow.disabled = false;
-            leftArrow.classList.remove('disabled');
-          }
-
-          if (currentIndex === cards.length - 1) {
-            rightArrow.disabled = true;
-            rightArrow.classList.add('disabled');
-          } else {
-            rightArrow.disabled = false;
-            rightArrow.classList.remove('disabled');
-          }
+        function updateArrowButtons() {
+          leftArrow.classList.toggle('disabled', currentIndex1 === 0);
+          rightArrow.classList.toggle('disabled', currentIndex1 === cards1.length - 1);
         }
 
-        // Initial setup
-        updateBlur(); 
-        updateArrowButtons();
+        leftArrow.addEventListener('click', () => snapTo(currentIndex1 - 1));
+        rightArrow.addEventListener('click', () => snapTo(currentIndex1 + 1));
 
-        leftArrow.addEventListener('click', () => {
-          if (currentIndex > 0) {
-            currentIndex--;
-            const cardWidth = cards[currentIndex].offsetWidth + 20; 
-            carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-            updateBlur();
-            updateArrowButtons();
-          }
+        // Keep alignment when resizing between desktop/mobile
+        window.addEventListener('resize', () => snapTo(currentIndex1));
+
+        // Optional: after a manual swipe, make sure we end exactly on a card
+        let t;
+        carousel.addEventListener('scroll', () => {
+          clearTimeout(t);
+          t = setTimeout(() => snapTo(currentIndex1), 80);
         });
 
-        rightArrow.addEventListener('click', () => {
-          if (currentIndex < cards.length - 1) {
-            currentIndex++;
-            const cardWidth = cards[currentIndex].offsetWidth + 20;
-            carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
-            updateBlur();
-            updateArrowButtons();
-          }
-        });
+        // init
+        snapTo(0);
       </script>
+
+  
 
 
 

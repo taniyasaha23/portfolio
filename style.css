@@ -426,7 +426,8 @@ html {
 
 @media (max-width: 768px) {
   .awards-section {
-    padding: 50px 15px;
+    /*padding: 50px 15px; */
+    padding: 50px 10px;
   }
 
   .section-title {
@@ -434,16 +435,25 @@ html {
     font-size: 1.5rem;
   }
 
+  .carousel-container {
+    padding-top: 0;
+  }
+
   .carousel-track {
-    padding: 30px 0 !important; /* Reduce vertical spacing */
+    /*padding: 30px 0 !important;  Reduce vertical spacing 
     gap: 20px; /* Less space between cards */
+    /*padding: 10px 0 !important; */
+    padding: 10px 0 !important; 
+    gap: 15px; 
+    
   }
 
   .award-card {
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding: 20px !important; /* Reduce internal padding */
-    margin: auto;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin:  auto; /* center */
+    padding: 15px;
+    box-sizing: border-box;
   }
 
   .award-card h3 {
@@ -456,17 +466,25 @@ html {
   }
   
   .certificates {
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
   }
 
   .certificates img {
-    max-width: 90%;
+    /*max-width: 90%;
     height: auto;
-    max-height: 180px; /* Reduce image size for smaller screens */
+    max-height: 180px; */
+    max-width: 100%;
+    height: auto;
+    max-height: 120px; /* shrink image height */
+    object-fit: contain;
   }
+  
 
   .medal {
-    max-height: 200%;
+    /*max-height: 200%; */
+    max-height: 120px;
   }
 
   .carousel-track .award-card:nth-child(2) {
@@ -551,7 +569,7 @@ html {
 .branding-carousel-wrapper {
   display: flex;
   gap: 100px;
-  overflow-x: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   padding: 70px 40px;
   scroll-snap-type: x mandatory;
@@ -688,24 +706,32 @@ html {
 @media (max-width: 768px) {
 
   .branding-carousel-wrapper {
-    padding-top: 0 !important;
+    /*padding-top: 0 !important;
     margin-top: 0 !important;
     flex-direction: row;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 16px;
     padding: 10px 10px;
+    -webkit-overflow-scrolling: touch; */
+    padding: 0 !important;          /* no inner padding */
+    gap: 0 !important;               /* no inter-card gap */
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0;
     -webkit-overflow-scrolling: touch;
   }
 
   .branding-card {
-    margin-top: 0 !important;
+    /*margin-top: 0 !important;
     padding-top: 10px !important;
-    
-    min-width: 100%;         /* Use full width */
+    min-width: 100%;         
     max-height: 470px;
     padding: 15px;
-    overflow-x: auto;        /* Allow horizontal scroll for inner content */
+    overflow-x: auto;      */  
+    min-width: 100% !important;      /* fill viewport width */
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;        /* don't rest between cards */
   }
 
   .branding-row {
@@ -955,7 +981,7 @@ color: whitesmoke;
 .graphic-cards-wrapper {
   display: flex;
   gap: 2rem;
-  overflow-x: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   padding: 0;
   width: 100%;
@@ -1261,7 +1287,7 @@ color: whitesmoke;
 .competition-cards-wrapper {
   display: flex;
   gap: 2rem;
-  overflow-x: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   padding: 0;
   width: 100%;
