@@ -1,7 +1,7 @@
 // Hero Section
 document.addEventListener('DOMContentLoaded', function() {
   var typed = new Typed('#typing-text', {
-    strings: ['UI/UX Designer', 'Web Designer'],
+    strings: ['UI/UX Designer', 'Graphic Designer'],
     typeSpeed: 80,
     backSpeed: 50,
     backDelay: 1500,
