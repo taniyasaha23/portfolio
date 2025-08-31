@@ -16,13 +16,13 @@ body {
 
 @media (max-width: 768px) {
     .sub-hero-name{
-        font-size: 1.2rem;
+        font-size: 1.5rem !important;
     }
     .hero-name {
-        font-size: 2rem;
+        font-size: 2.5rem !important;
     }
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.3rem !important;
     }
     .text-container {
         padding: 30px 20px;
@@ -224,11 +224,11 @@ html {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 0 !important;
-    text-align: center;
+    text-align: left;
   }
 
   #about h3{
-    font-size: 24px !important;
+    font-size: 22px !important;
   }
   
 
@@ -1774,4 +1774,5 @@ color: whitesmoke;
   .back-to-top:hover {
   background-color: #33cccc;
   }
+
 }
