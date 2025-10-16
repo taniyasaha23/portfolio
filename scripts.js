@@ -64,18 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const rightArrow = document.querySelector('.right-arrow1');
   const cards = document.querySelectorAll('.graphic-card');
 
-  // Get width of one card (assume all cards same width)
-//  function getCardWidth() {
-//   return cards[0].getBoundingClientRect().width + 16; // 16px = average gap
-//  }
-
-//  function scrollToCard(direction) {
-//    const scrollAmount = getCardWidth();
-//    wrapper.scrollBy({
-//      left: direction * scrollAmount,
-//      behavior: 'smooth'
-//    });
-//  }
 
 function getScrollAmount() {
   if (window.innerWidth <= 768) {
@@ -160,18 +148,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const rightArrow = document.querySelector('.right-arrow2');
   const cards = document.querySelectorAll('.competition-card');
 
-  // Get width of one card (assume all cards same width)
-//  function getCardWidth() {
-//    return cards[0].getBoundingClientRect().width + 16; // 16px = average gap
-//  }
-
-//  function scrollToCard(direction) {
-//    const scrollAmount = getCardWidth();
-//    wrapper.scrollBy({
-//      left: direction * scrollAmount,
-//      behavior: 'smooth'
-//    });
-//  }
 
 function getScrollAmount() {
   if (window.innerWidth <= 768) {
@@ -204,6 +180,9 @@ function scrollToCard(direction) {
   wrapper.addEventListener('scroll', updateArrowVisibility);
   updateArrowVisibility(); // Initial check
 });
+
+
+
 
 
 
