@@ -444,48 +444,110 @@ html {
   }
 
   .carousel-track {
-    padding: 10px 0 !important; 
-    gap: 15px; 
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+
+    /* snap cleanly and align every card at the same start */
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 10px;     /* match outer padding */
+    -webkit-overflow-scrolling: touch;
+
+    /* remove extra vertical padding that was shifting starts */
+    padding: 0 0 10px !important;
+    align-items: stretch;
     
   }
 
   .award-card {
     flex: 0 0 100% !important;
     max-width: 100% !important;
-    margin:  auto; /* center */
-    padding: 15px;
+    margin: 0 !important;                 /* <- important */
+    padding: 16px 15px !important;        /* unify internal spacing */
     box-sizing: border-box;
+    scroll-snap-align: start;
   }
 
+  .award-card > *:first-child { margin-top: 0 !important; }
+
   .award-card h3 {
+    margin:0 0 8px !important;
     font-size: 1.2rem;
+    line-height: 1.25;
   }
 
   .award-card p {
+    margin:0 0 12px !important;
     font-size: 0.8rem;
     line-height: 1.4;
   }
   
   .certificates {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    margin-top: 0 !important;
   }
 
   .certificates img {
+    display:block;
+    margin: 0 auto;
     max-width: 100%;
     height: auto;
-    max-height: 120px; /* shrink image height */
+    max-height: 120px; 
     object-fit: contain;
   }
   
 
   .medal {
-    max-height: 120px;
+    display:block;
+    margin: 0 auto !important;
+    padding-top: 50px !important;
+    max-width:100%;
+    height:auto;
+    max-height: 390px !important;
+    object-fit: contain;
   }
 
-  .carousel-track .award-card:nth-child(2) {
-    margin-top: -1px; /* Adjust this value if needed */
+  .GenAI {
+    display:block;
+    margin: 0 auto !important;
+    padding-top: 50px !important;
+    max-width:100%;
+    height:auto;
+    max-height: 390px !important;
+    object-fit: contain;
+  }
+
+  .DGWA {
+    display:block;
+    margin: 0 auto !important;
+    padding-top: 50px !important;
+    max-width:100%;
+    height:auto;
+    max-height: 350px !important;
+    object-fit: contain;
+  }
+
+  /* horizontal carousel */
+  .carousel-track{
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    align-items: stretch;                 /* all cards same top baseline */
+    scroll-snap-type: x mandatory;
+    scroll-padding: 10px;                 /* horizontal snap padding only */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel-track .award-card:nth-child(2),
+  .carousel-track .award-card:nth-child(1),
+  .carousel-track .award-card:nth-child(3),
+  .carousel-track .award-card:nth-child(4) {
+    margin-top: 0 !important;
   }
 }
 
